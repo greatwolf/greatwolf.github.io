@@ -13,6 +13,7 @@
           engine: e.engine,
           tpp: e.tpp
         }, t(a + "scripts/" + e.script_id, function() {}))
+        console.log("e: " + e)
       })
     }
 
@@ -103,7 +104,7 @@
         {
           function r()
           {
-            count = Math.min(10, count)
+            count = Math.min(5, count)
             return count -= 1, 0 >= count ? (masterFunc.updateVisual(count), clearInterval(a), n && masterFunc.fire(), void(void 0 == t ? masterFunc.completeVisual() : (masterFunc.removeVisual(), t()))) : void masterFunc.updateVisual(count)
           }
           var a = setInterval(r, 1e3)

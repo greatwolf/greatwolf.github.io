@@ -1,0 +1,4 @@
+This is a Brave Payments publisher verification file.
+
+Domain: greatwolf.github.io
+Token: 4a05fe0d7d3d84df7b1d31372d8fa00abd2c4e961828f6a1c009e0f8d10bbe27

@@ -31,7 +31,8 @@
     local cmc_widget = jq '.coinmarketcap-currency-widget'
     local cmc_url = 
 
-    print( jq.get("https://widgets.coinmarketcap.com/v2/ticker/131/?ref=widget&convert=EUR") )
+    print( jq.get("https://widgets.coinmarketcap.com/v2/ticker/131/") )
+    print( jq.getJSON("https://widgets.coinmarketcap.com/v2/ticker/131/") )
   </script>
 </head>
 <body>

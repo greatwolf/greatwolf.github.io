@@ -1,0 +1,53 @@
+<html>
+<head>
+  <script type="text/javascript"
+          src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script type="text/javascript"
+          src="https://github.com/fengari-lua/fengari-web/releases/download/v0.1.4/fengari-web.js"></script>
+  <script type="text/javascript" src="./currency.js"></script>
+  <script type="text/javascript">
+    $(function()
+    {
+      console.log('page ready 1')
+      $('document body').on('change', '.coinmarketcap-currency-widget',
+      function()
+      {
+        console.log("widget : ")// + $('.coinmarketcap-currency-widget div div div').length)
+      })
+    })
+  </script>
+  <script type="application/lua">
+    local window = require 'js'.global
+    local jq = window.jQuery
+    
+    function dump(t)
+      print '{'
+      for k, v in pairs(t) do
+        print(k, ':', v)
+      end
+      print '}'
+    end
+    
+    local cmc_widget = jq '.coinmarketcap-currency-widget'
+    local cmc_url = 
+
+    jq.get("https://widgets.coinmarketcap.com/v2/ticker/131/?ref=widget&convert=EUR")
+  </script>
+</head>
+<body>
+  <div class="coinmarketcap-currency-widget"
+        data-currencyid="131"
+        data-base="EUR"
+        data-secondary="USD"
+        data-ticker="true" data-rank="false" data-marketcap="false" data-volume="false"
+        data-stats="USD" data-statsticker="false"></div>
+
+  <script type="text/javascript">
+    $('document').ready(
+      function()
+      {
+        console.log("page ready 2")
+      })
+  </script>
+</body>
+</html>

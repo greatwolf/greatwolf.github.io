@@ -30,7 +30,7 @@
     
     local cmc_widget = jq '.coinmarketcap-currency-widget'
 
-    local result = jq.get("https://widgets.coinmarketcap.com/v2/ticker/131/")
+    local result = jq:get("https://widgets.coinmarketcap.com/v2/ticker/131/")
     print(result.responseJSON.data)
   </script>
 </head>
